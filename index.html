@@ -2,16 +2,48 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Consulta Licencia OCR - Kyocera</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-    <div class="container">
-        <h1>LICENCIA OCR - EQUIPOS KYOCERA TASKALFA RANGO A3</h1>
-        <input type="text" id="serieInput" placeholder="Ingresa número de serie del equipo a consultar">
-        <button id="consultarBtn">Consultar</button>
-        <div id="resultado"></div>
-    </div>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1>LICENCIA OCR - EQUIPOS KYOCERA TASKALFA RANGO A3</h1>
+            
+        </header>
+        <p>Equipos registados del 2019 a 2024, total equipos consultar 1787 unidades.</p>    
+        <p>para obtener la licencia deberá registar una serie sin espacios, por ejemplo <br>H6J2700535</br> </p>
+
+        <section class="input-secction">
+            <h2 class="section-title">Ingrese la serie del equipo Kyocera TaskAlfa MFP formato A3</h2>
+            <div class="input -secction">
+                <input type="text" id="serieInput" placeholder="Ingresa número de serie del equipo a consultar">    
+            </div>
+
+            <div class="button-container">
+                <button id="consultarBtn" class="button-draw" onclick="sortearAmigo()" aria-label="buscar serie">
+                    <!--img src="assets/play_circle_outline.png" alt="Ícono para sortear"-->
+                    Buscar Serie
+                </button>
+                
+            </div>
+                           
+            <div id="resultado" class="result-list" aria-live="polite">
+            <br><br/>
+            <button class="button-draw" onclick="reiniciarPagina()" aria-label="Nueva Busqueda" id ="reload">Nueva Busqueda</button>
+            </div>
+        
+        </section>
+        
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
