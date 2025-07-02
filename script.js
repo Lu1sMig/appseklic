@@ -2,7 +2,7 @@ document.getElementById('consultarBtn').addEventListener('click', function() {
     const serieInput = document.getElementById('serieInput').value.trim().toUpperCase();
     const resultadoDiv = document.getElementById('resultado');
 
-    fetch('data1.json')
+    fetch('data2.json')
         .then(response => response.json())
         .then(data => {
             const equipo = data.find(item => item.serie === serieInput);
